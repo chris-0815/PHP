@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $pdo = new PDO(
     'mysql:host=localhost;dbname=blog',
@@ -6,7 +6,7 @@ $pdo = new PDO(
     ''
 );
 
-function fetch_posts() 
+function fetch_posts()
 {
     global $pdo;
     return $pdo->query("SELECT * FROM `posts`");
@@ -15,7 +15,6 @@ function fetch_posts()
 function fetch_post($title)
 {
     global $pdo;
-    return $pdo->query("SELECT * FROM `posts`WHERE title='{$title}'");
+    $q = $pdo->query("SELECT * FROM `posts`WHERE title='{$title}'");
+    return $q->fetch();
 }
-
-?>
