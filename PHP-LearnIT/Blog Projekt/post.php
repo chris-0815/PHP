@@ -5,19 +5,18 @@
 <p class="lead">Du befindest dich jetzt auf der posts.php Seite.</p>
 
 <?php
-$title = $_GET['title'];
-$post = fetch_post($title);
-var_dump($post->fetch());
+$id = $_GET['id'];
+$post = fetch_post($id);
+var_dump($post);
 ?>
-
-<pre><?php var_dump($_GET); ?></pre>
 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title"><?php echo $post["title"]; ?></h3>
     </div>
     <div class="panel-body">
-        <?php echo $post["content"]; ?>
+        <!-- <?php echo str_replace("\n", "<br />", $post["content"]); ?> --><!-- DAS IST EINE OPTION FÜR NEWLINE--> 
+        <?php echo nl2br($post["content"]);?>
     </div>
 </div>
 
