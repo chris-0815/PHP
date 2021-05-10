@@ -1,5 +1,6 @@
 <?php
 
+require "./src/User/User.php";
 require "./src/Blog/PostInterface.php";
 require "./src/Blog/Post.php";
 require "./src/Forum/Post.php";
