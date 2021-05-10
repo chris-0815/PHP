@@ -1,6 +1,8 @@
 <?php
 
-class ForumPost
+namespace Forum;
+
+class Post
 {
     public $title;
 }

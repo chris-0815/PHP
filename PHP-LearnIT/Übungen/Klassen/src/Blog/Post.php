@@ -1,6 +1,8 @@
 <?php
 
-class BlogPost
+namespace Blog;
+
+class Post implements PostInterface
 {
     public $title;
 }
