@@ -1,6 +1,6 @@
 <?php
 
-class ForumPost
+class App\ForumPost
 {
     public $title;
 }

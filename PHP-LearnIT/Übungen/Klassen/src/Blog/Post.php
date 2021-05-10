@@ -1,8 +1,8 @@
 <?php
 
-namespace Blog;
+namespace App\Blog;
 
-use User\User as SomeUser;
+use App\User\User as SomeUser;
 
 class Post implements PostInterface
 {
@@ -12,7 +12,7 @@ class Post implements PostInterface
 
     public function __construct()
     {
-        $this->user = new \User\User();
+        $this->user = new App\User\User();
         $this->blogUser = new SomeUser();
     }
 }
