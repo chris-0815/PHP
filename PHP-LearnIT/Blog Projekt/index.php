@@ -1,11 +1,12 @@
-<?php include("./database.php");?>
+<?php include("./init.php");?>
 <?php include("elements/header.php");?>
 
 <h1>Startseite des Blogs</h1>
 <p class="lead">Das hier ist die Startseite des Blogs.</p>
 
 <?php
-    $res = fetch_posts();
+$postsRepository = new App\Post\PostsRepository($pdo);
+$res = $postsRepository->fetchPosts();
 ?>
 
 <ul>

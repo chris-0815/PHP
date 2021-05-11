@@ -1,13 +1,14 @@
-<?php include("./database.php");?>
+<?php include("./init.php");?>
 <?php include("elements/header.php");?>
 
 <h1>Post.php</h1>
 <p class="lead">Du befindest dich jetzt auf der posts.php Seite.</p>
 
 <?php
+$postsRepository = new App\Post\PostsRepository($pdo);
 $id = $_GET['id'];
-$post = fetch_post($id);
-var_dump($post);
+$post = $postsRepository-> fetchPost($id);
+// var_dump($post);
 ?>
 
 <div class="panel panel-default">
