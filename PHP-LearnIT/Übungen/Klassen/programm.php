@@ -3,7 +3,7 @@
 function autoload($className)
 {
     $prefix = "App";
-    $dir = "./src";
+    $dir = "./src/";
 
     $clss = substr($classname, strlen($prefix));
     $clss = str_replace("\\", "/", $clss);
